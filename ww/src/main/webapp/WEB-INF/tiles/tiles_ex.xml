@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	
+	<!--// Empty Layout  -->
+	<definition name="empty" template="/view/layout/empty-layout.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<!--// Popup Layout -->
+	<definition name="popup" template="/view/layout/popup-layout.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- Popup Layout //-->
+	
+	<!--// Blank Layout -->
+	<definition name="blank" template="/view/layout/blank-layout.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- Blank Layout //-->
+
+	<!--// Default Layout -->
+	<definition name="default" template="/view/layout/default-layout.jsp">
+		<put-attribute name="title" value="G-Wave :: 초록우산 어린이재단" />
+		<put-attribute name="header" value="/view/layout/header-include.jsp" />
+		<put-attribute name="nav" value="/view/layout/nav-include.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- Default Layout //-->
+	
+	<definition name="loginForm" extends="blank">
+		<put-attribute name="body" value="/WEB-INF/jsp/loginForm.jsp" />
+	</definition>
+	
+	<definition name="error" extends="blank">
+		<put-attribute name="body" value="/WEB-INF/jsp/error.jsp" />
+	</definition>
+	
+	<definition name="hmpAdm/inquire/childLetterPreviewPop" extends="blank">
+		<put-attribute name="body" value="/WEB-INF/jsp/hmpAdm/inquire/childLetterPreviewPop.jsp" />
+	</definition>
+	
+	<definition name="fram/redirect" extends="empty">
+		<put-attribute name="body" value="/WEB-INF/jsp/fram/redirect.jsp" />
+	</definition>
+	
+	<definition name="*/*/*Blank" extends="blank">
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}/{3}Blank.jsp" />
+	</definition>
+	
+	<definition name="*/*Ajax" extends="empty">
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}Ajax.jsp" />
+	</definition>
+	
+	<definition name="*/*/*Ajax" extends="empty">
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}/{3}Ajax.jsp" />
+	</definition>
+	
+	<definition name="*/*Pop" extends="popup">
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}Pop.jsp" />
+	</definition>
+	
+	<definition name="*/*/*Pop" extends="popup">
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}/{3}Pop.jsp" />
+	</definition>
+	
+	<definition name="*/*" extends="default">
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="*/*/*" extends="default">
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}/{3}.jsp" />
+	</definition>
+	
+</tiles-definitions>

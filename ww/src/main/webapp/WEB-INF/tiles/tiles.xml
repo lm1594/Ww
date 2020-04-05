@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!--// Default Layout -->
+	<definition name="default" template="/view/layout/default-layout.jsp">
+		<put-attribute name="title" value="테스트 :: 이경민" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!-- Default Layout //-->
+	
+	<definition name="*/*" extends="default">
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="*/*/*" extends="default">
+		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}/{3}.jsp" />
+	</definition>
+</tiles-definitions>
