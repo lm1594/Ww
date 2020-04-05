@@ -20,9 +20,17 @@ import org.springframework.web.servlet.view.BeanNameViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
+import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
 
+import lkm.ww.comn.abstractview.NULLView;
+import lkm.ww.comn.file.CSVDownload;
+import lkm.ww.comn.file.ExcelDownload;
+import lkm.ww.comn.file.FileDownload;
+import lkm.ww.comn.file.PDFDownload;
+import lkm.ww.comn.file.TxtDownload;
+import lkm.ww.comn.file.WordDownload;
 import lkm.ww.comn.web.filter.CORSFilter;
 import lkm.ww.comn.web.filter.ClickJackFilter;
 import lkm.ww.comn.web.filter.XSSFilter;
@@ -162,5 +170,48 @@ public class DispatcherConfig implements WebMvcConfigurer{
 		tilesConfigurer.setDefinitions(new String[] {"/WEB-INF/tiles/tiles.xml"});
 		tilesConfigurer.setCheckRefresh(true);
 		return tilesConfigurer;
+	}
+	
+	
+	//------------------------------------------------------------------------------------------------
+	// View
+	//------------------------------------------------------------------------------------------------
+	@Bean(name = "nullView")
+	public NULLView nullView() {
+		return new NULLView();
+	}
+
+	@Bean(name = "jsonView")
+	public MappingJackson2JsonView jsonView() {
+		return new MappingJackson2JsonView();
+	}
+	@Bean(name = "fileDownload")
+	public FileDownload fileDownload() {
+		return new FileDownload();
+	}
+
+	@Bean(name = "csvDownload")
+	public CSVDownload csvDownload() {
+		return new CSVDownload();
+	}
+
+	@Bean(name = "excelDownload")
+	public ExcelDownload excelDownload() {
+		return new ExcelDownload();
+	}
+
+	@Bean(name = "wordDownload")
+	public WordDownload wordDownload() {
+		return new WordDownload();
+	}
+
+	@Bean(name = "pdfDownload")
+	public PDFDownload pdfDownload() {
+		return new PDFDownload();
+	}
+	
+	@Bean(name = "txtDownload")
+	public TxtDownload txtDownload() {
+		return new TxtDownload();
 	}
 }
