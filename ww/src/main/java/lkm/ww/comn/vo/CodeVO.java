@@ -10,7 +10,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class CodeVO extends BaseVO {
+public class CodeVO{
 	
 	private String codeDiv;								// 코드구분
 	private String codeDnm;								// 코드구분명
