@@ -9,25 +9,100 @@
 		location.href='/ww/test/'+pageName+'.do';
 	}
 </script>
-<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-	<div class="content">
-		<h2>TEST4</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-		<ul class="actions stacked">
-			<li><a href="#" class="button">Learn More</a></li>
-		</ul>
-		<hr/>
-		<ul class="actions stacked">
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test1');" class="button big wide smooth-scroll-middle">TEST1</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test2');" class="button big wide smooth-scroll-middle">TEST2</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test3');" class="button big wide smooth-scroll-middle">TEST3</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test4');" class="button big wide smooth-scroll-middle">TEST4</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test5');" class="button big wide smooth-scroll-middle">TEST5</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test6');" class="button big wide smooth-scroll-middle">TEST6</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test7');" class="button big wide smooth-scroll-middle">TEST7</a></li>
-		</ul>
-	</div>
-	<div class="image">
-		<img src="/images/spotlight03.jpg" alt="" />
+<!-- Start Pricing Area -->
+<section class="pricing-area section-gap-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title text-center">
+					<h3>Pricing Plan</h3>
+					<h2><span>Choose</span> Your Package</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="pricing_item">
+					<h3 class="p_title">Weeding</h3>
+					<p class="p_criteria">Attend only first day</p>
+					<h1 class="p_price">$46.00</h1>
+					<div class="p_list">
+						<ul>
+							<li><span class="ti-check"></span> Unlimited Entrance</li>
+							<li><span class="ti-check"></span> Unlimited Entrance</li>
+							<li><span class="ti-check"></span> Unlimited Entrance</li>
+							<li><span class="ti-close cross"></span> Unlimited Entrance</li>
+							<li><span class="ti-close cross"></span> Unlimited Entrance</li>
+						</ul>
+						<a class="primary-btn mt-4" href="#" data-text="Book Now">
+							<span>B</span>
+							<span>o</span>
+							<span>o</span>
+							<span>k</span>
+							<span> </span>
+							<span>N</span>
+							<span>o</span>
+							<span>w</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="pricing_item">
+					<h3 class="p_title">Studio</h3>
+					<p class="p_criteria">Attend only first day</p>
+					<h1 class="p_price">$76.00</h1>
+					<div class="p_list">
+						<ul>
+							<li><span class="ti-check"></span> Unlimited Entrance</li>
+							<li><span class="ti-check"></span> Unlimited Entrance</li>
+							<li><span class="ti-check"></span> Unlimited Entrance</li>
+							<li><span class="ti-close cross"></span> Unlimited Entrance</li>
+							<li><span class="ti-close cross"></span> Unlimited Entrance</li>
+						</ul>
+						<a class="primary-btn mt-4" href="#" data-text="Book Now">
+							<span>B</span>
+							<span>o</span>
+							<span>o</span>
+							<span>k</span>
+							<span> </span>
+							<span>N</span>
+							<span>o</span>
+							<span>w</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="pricing_item">
+					<h3 class="p_title">Fashion</h3>
+					<p class="p_criteria">Attend only first day</p>
+					<h1 class="p_price">$96.00</h1>
+					<div class="p_list">
+						<ul>
+							<li><span class="ti-check"></span> Unlimited Entrance</li>
+							<li><span class="ti-check"></span> Unlimited Entrance</li>
+							<li><span class="ti-check"></span> Unlimited Entrance</li>
+							<li><span class="ti-close cross"></span> Unlimited Entrance</li>
+							<li><span class="ti-close cross"></span> Unlimited Entrance</li>
+						</ul>
+						<a class="primary-btn mt-4" href="#" data-text="Book Now">
+							<span>B</span>
+							<span>o</span>
+							<span>o</span>
+							<span>k</span>
+							<span> </span>
+							<span>N</span>
+							<span>o</span>
+							<span>w</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
+<!-- End Pricing Area -->

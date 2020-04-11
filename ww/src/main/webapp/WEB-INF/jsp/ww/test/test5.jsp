@@ -9,168 +9,117 @@
 		location.href='/ww/test/'+pageName+'.do';
 	}
 </script>
-<section class="wrapper style1 align-center">
-	<div class="inner">
-		<h2>TEST5</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
-	</div>
-
-	<!-- Gallery -->
-		<div class="gallery style2 medium lightbox onscroll-fade-in">
-			<article>
-				<a href="/images/gallery/fulls/01.jpg" class="image">
-					<img src="/images/gallery/thumbs/01.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Ipsum Dolor</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
+<!-- Start Blog Area -->
+<section class="blog-area section-gap-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title text-center">
+					<h3>Our Blog</h3>
+					<h2><span>Latest</span> Good Story</h2>
 				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/02.jpg" class="image">
-					<img src="/images/gallery/thumbs/02.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Feugiat Lorem</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/03.jpg" class="image">
-					<img src="/images/gallery/thumbs/03.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Magna Amet</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/04.jpg" class="image">
-					<img src="/images/gallery/thumbs/04.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Sed Tempus</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/05.jpg" class="image">
-					<img src="/images/gallery/thumbs/05.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Ultrices Magna</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/06.jpg" class="image">
-					<img src="/images/gallery/thumbs/06.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Sed Tempus</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/07.jpg" class="image">
-					<img src="/images/gallery/thumbs/07.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Ipsum Lorem</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/08.jpg" class="image">
-					<img src="/images/gallery/thumbs/08.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Magna Risus</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/09.jpg" class="image">
-					<img src="/images/gallery/thumbs/09.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Tempus Dolor</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/10.jpg" class="image">
-					<img src="/images/gallery/thumbs/10.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Sed Etiam</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/11.jpg" class="image">
-					<img src="/images/gallery/thumbs/11.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Magna Lorem</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
-			<article>
-				<a href="/images/gallery/fulls/12.jpg" class="image">
-					<img src="/images/gallery/thumbs/12.jpg" alt="" />
-				</a>
-				<div class="caption">
-					<h3>Ipsum Dolor</h3>
-					<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-					<ul class="actions fixed">
-						<li><span class="button small">Details</span></li>
-					</ul>
-				</div>
-			</article>
+			</div>
 		</div>
-		<hr/>
-		<ul class="actions stacked">
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test1');" class="button big wide smooth-scroll-middle">TEST1</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test2');" class="button big wide smooth-scroll-middle">TEST2</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test3');" class="button big wide smooth-scroll-middle">TEST3</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test4');" class="button big wide smooth-scroll-middle">TEST4</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test5');" class="button big wide smooth-scroll-middle">TEST5</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test6');" class="button big wide smooth-scroll-middle">TEST6</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test7');" class="button big wide smooth-scroll-middle">TEST7</a></li>
-		</ul>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="single-recent-blog mb-lg-3 mb-5">
+					<div class="thumb">
+						<img class="f-img img-fluid mx-auto" src="img/b1.jpg" alt="">
+					</div>
+					<a href="#">
+						<h4 class="mt-4 mb-3">Pictures of the year 2018, from the migrant caravan to Serena do
+							Williams Harbor dangerous</h4>
+					</a>
+					<div class="mb-3 bottom d-flex justify-content-between align-items-center flex-wrap">
+						<div class="meta">
+							<span class="ti-user mr-1"></span> Admin
+							<span class="ti-calendar mr-1"></span> 20/09/2018
+						</div>
+					</div>
+					<p>
+						Unfeeling agreeable suffering it on smallness newspaper be. So come must
+						time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite
+						put sometimes enjoyment perpetual now. Behind lovers eat having length horses
+						vanity say had its damn owes meter exquisite.
+					</p>
+				</div>
+			</div>
 
+			<div class="col-lg-6">
+				<div class="single-recent-blog mb-lg-3 mb-5">
+					<div class="row">
+						<div class="col-lg-6 col-md-5">
+							<div class="thumb">
+								<img class="f-img img-fluid mx-auto" src="img/b2.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 mt-md-0 mt-3">
+							<a href="#">
+								<h4 class="mb-lg-3 mb-2">Spirits in the sky over Northern Ireland lake</h4>
+							</a>
+							<div class="bottom d-flex justify-content-between align-items-center flex-wrap mb-3">
+								<div class="meta">
+									<span class="ti-user mr-1"></span> Admin
+									<span class="ti-calendar mr-1"></span> 20/09/2018
+								</div>
+							</div>
+							<p>
+								Behind lovers eat having length horses vanity say had its mega.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="single-recent-blog mb-lg-3 mb-5">
+					<div class="row">
+						<div class="col-lg-6 col-md-5">
+							<div class="thumb">
+								<img class="f-img img-fluid mx-auto" src="img/b3.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 mt-md-0 mt-3">
+							<a href="#">
+								<h4 class="mb-lg-3 mb-2">Spirits in the sky over Northern Ireland lake</h4>
+							</a>
+							<div class="bottom d-flex justify-content-between align-items-center flex-wrap mb-3">
+								<div class="meta">
+									<span class="ti-user mr-1"></span> Admin
+									<span class="ti-calendar mr-1"></span> 20/09/2018
+								</div>
+							</div>
+							<p>
+								Behind lovers eat having length horses vanity say had its mega.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="single-recent-blog mb-lg-3 mb-5">
+					<div class="row">
+						<div class="col-lg-6 col-md-5">
+							<div class="thumb">
+								<img class="f-img img-fluid mx-auto" src="img/b4.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 mt-md-0 mt-3">
+							<a href="#">
+								<h4 class="mb-lg-3 mb-2">Spirits in the sky over Northern Ireland lake</h4>
+							</a>
+							<div class="bottom d-flex justify-content-between align-items-center flex-wrap mb-3">
+								<div class="meta">
+									<span class="ti-user mr-1"></span> Admin
+									<span class="ti-calendar mr-1"></span> 20/09/2018
+								</div>
+							</div>
+							<p>
+								Behind lovers eat having length horses vanity say had its mega.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
 </section>
+<!-- End Blog Area -->

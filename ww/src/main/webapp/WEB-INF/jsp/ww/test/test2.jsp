@@ -9,25 +9,78 @@
 		location.href='/ww/test/'+pageName+'.do';
 	}
 </script>
-<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-	<div class="content">
-		<h2>TEST2</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-		<ul class="actions stacked">
-			<li><a href="#" class="button">Learn More</a></li>
-		</ul>
-		<hr/>
-		<ul class="actions stacked">
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test1');" class="button big wide smooth-scroll-middle">TEST1</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test2');" class="button big wide smooth-scroll-middle">TEST2</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test3');" class="button big wide smooth-scroll-middle">TEST3</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test4');" class="button big wide smooth-scroll-middle">TEST4</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test5');" class="button big wide smooth-scroll-middle">TEST5</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test6');" class="button big wide smooth-scroll-middle">TEST6</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test7');" class="button big wide smooth-scroll-middle">TEST7</a></li>
-		</ul>
-	</div>
-	<div class="image">
-		<img src="/images/spotlight01.jpg" alt="" />
+<!-- Start Service Area -->
+<section class="service-area section-gap-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title text-center">
+					<h3>Our Services</h3>
+					<h2><span>What We Offer</span></h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.0s">
+					<div class="d-flex align-items-center mb-3">
+						<i class="flaticon-shirt"></i>
+						<h4 class="ml-3">Fashion Photography</h4>
+					</div>
+					<p>An so vulgar to on points wanted. No rapturous resolving continued household northward gay he it otherwise</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+					<div class="d-flex align-items-center mb-3">
+						<i class="flaticon-water"></i>
+						<h4 class="ml-3">Nature Photgraphy</h4>
+					</div>
+					<p>An so vulgar to on points wanted. No rapturous resolving continued household northward gay he it otherwise</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+					<div class="d-flex align-items-center mb-3">
+						<i class="flaticon-content"></i>
+						<h4 class="ml-3">Event Coverage</h4>
+					</div>
+					<p>An so vulgar to on points wanted. No rapturous resolving continued household northward gay he it otherwise</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+					<div class="d-flex align-items-center mb-3">
+						<i class="flaticon-art"></i>
+						<h4 class="ml-3">Property Tours</h4>
+					</div>
+					<p>An so vulgar to on points wanted. No rapturous resolving continued household northward gay he it otherwise</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+					<div class="d-flex align-items-center mb-3">
+						<i class="flaticon-button"></i>
+						<h4 class="ml-3">Multimedia Services</h4>
+					</div>
+					<p>An so vulgar to on points wanted. No rapturous resolving continued household northward gay he it otherwise</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6">
+				<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+					<div class="d-flex align-items-center mb-3">
+						<i class="flaticon-ring"></i>
+						<h4 class="ml-3">Weeding Photography</h4>
+					</div>
+					<p>An so vulgar to on points wanted. No rapturous resolving continued household northward gay he it otherwise</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
+<!-- End Service Area -->

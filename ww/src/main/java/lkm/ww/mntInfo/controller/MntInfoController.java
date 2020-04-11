@@ -46,17 +46,4 @@ public class MntInfoController {
 		
 		return mav;
 	}
-	
-	/**
-	 * 산정보 목록 조회 화면 Ajax
-	 * @param MntInfoVO
-	 * @return ModelAndView
-	 * @throws Exception
-	 */
-	@RequestMapping(value = "/mntInfoListAjax.do")
-	public ModelAndView mntInfoListAjax(HttpServletRequest request, @ModelAttribute("pvo") MntInfoVO pvo) throws Exception {
-		ModelAndView mav = new ModelAndView("ww/mntInfo/mntInfoListAjax");
-		System.out.println("##### mntInfoListAjax 실행");
-		return mav;
-	}
 }

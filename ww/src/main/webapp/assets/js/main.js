@@ -1,341 +1,434 @@
-/*
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-(function($) {
-
-	var	$window = $(window),
-		$body = $('body'),
-		$wrapper = $('#wrapper');
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ '361px',   '480px'  ],
-			xxsmall:  [ null,      '360px'  ]
-		});
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Browser fixes.
-
-		// IE: Flexbox min-height bug.
-			if (browser.name == 'ie')
-				(function() {
-
-					var flexboxFixTimeoutId;
-
-					$window.on('resize.flexbox-fix', function() {
-
-						var $x = $('.fullscreen');
-
-						clearTimeout(flexboxFixTimeoutId);
-
-						flexboxFixTimeoutId = setTimeout(function() {
-
-							if ($x.prop('scrollHeight') > $window.height())
-								$x.css('height', 'auto');
-							else
-								$x.css('height', '100vh');
-
-						}, 250);
-
-					}).triggerHandler('resize.flexbox-fix');
-
-				})();
-
-		// Object fit workaround.
-			if (!browser.canUse('object-fit'))
-				(function() {
-
-					$('.banner .image, .spotlight .image').each(function() {
-
-						var $this = $(this),
-							$img = $this.children('img'),
-							positionClass = $this.parent().attr('class').match(/image-position-([a-z]+)/);
-
-						// Set image.
-							$this
-								.css('background-image', 'url("' + $img.attr('src') + '")')
-								.css('background-repeat', 'no-repeat')
-								.css('background-size', 'cover');
-
-						// Set position.
-							switch (positionClass.length > 1 ? positionClass[1] : '') {
-
-								case 'left':
-									$this.css('background-position', 'left');
-									break;
-
-								case 'right':
-									$this.css('background-position', 'right');
-									break;
-
-								default:
-								case 'center':
-									$this.css('background-position', 'center');
-									break;
-
-							}
-
-						// Hide original.
-							$img.css('opacity', '0');
-
-					});
-
-				})();
-
-	// Smooth scroll.
-		$('.smooth-scroll').scrolly();
-		$('.smooth-scroll-middle').scrolly({ anchor: 'middle' });
-
-	// Wrapper.
-		$wrapper.children()
-			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				initialize:	function() {
-					$(this).addClass('is-inactive');
-				},
-				terminate:	function() {
-					$(this).removeClass('is-inactive');
-				},
-				enter:		function() {
-					$(this).removeClass('is-inactive');
-				},
-				leave:		function() {
-
-					var $this = $(this);
-
-					if ($this.hasClass('onscroll-bidirectional'))
-						$this.addClass('is-inactive');
-
-				}
-			});
-
-	// Items.
-		$('.items')
-			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				delay:		50,
-				initialize:	function() {
-					$(this).addClass('is-inactive');
-				},
-				terminate:	function() {
-					$(this).removeClass('is-inactive');
-				},
-				enter:		function() {
-					$(this).removeClass('is-inactive');
-				},
-				leave:		function() {
-
-					var $this = $(this);
-
-					if ($this.hasClass('onscroll-bidirectional'))
-						$this.addClass('is-inactive');
-
-				}
-			})
-			.children()
-				.wrapInner('<div class="inner"></div>');
-
-	// Gallery.
-		$('.gallery')
-			.wrapInner('<div class="inner"></div>')
-			.prepend(browser.mobile ? '' : '<div class="forward"></div><div class="backward"></div>')
-			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				delay:		50,
-				initialize:	function() {
-					$(this).addClass('is-inactive');
-				},
-				terminate:	function() {
-					$(this).removeClass('is-inactive');
-				},
-				enter:		function() {
-					$(this).removeClass('is-inactive');
-				},
-				leave:		function() {
-
-					var $this = $(this);
-
-					if ($this.hasClass('onscroll-bidirectional'))
-						$this.addClass('is-inactive');
-
-				}
-			})
-			.children('.inner')
-				//.css('overflow', 'hidden')
-				.css('overflow-y', browser.mobile ? 'visible' : 'hidden')
-				.css('overflow-x', browser.mobile ? 'scroll' : 'hidden')
-				.scrollLeft(0);
-
-		// Style #1.
-			// ...
-
-		// Style #2.
-			$('.gallery')
-				.on('wheel', '.inner', function(event) {
-
-					var	$this = $(this),
-						delta = (event.originalEvent.deltaX * 10);
-
-					// Cap delta.
-						if (delta > 0)
-							delta = Math.min(25, delta);
-						else if (delta < 0)
-							delta = Math.max(-25, delta);
-
-					// Scroll.
-						$this.scrollLeft( $this.scrollLeft() + delta );
-
-				})
-				.on('mouseenter', '.forward, .backward', function(event) {
-
-					var $this = $(this),
-						$inner = $this.siblings('.inner'),
-						direction = ($this.hasClass('forward') ? 1 : -1);
-
-					// Clear move interval.
-						clearInterval(this._gallery_moveIntervalId);
-
-					// Start interval.
-						this._gallery_moveIntervalId = setInterval(function() {
-							$inner.scrollLeft( $inner.scrollLeft() + (5 * direction) );
-						}, 10);
-
-				})
-				.on('mouseleave', '.forward, .backward', function(event) {
-
-					// Clear move interval.
-						clearInterval(this._gallery_moveIntervalId);
-
-				});
-
-		// Lightbox.
-			$('.gallery.lightbox')
-				.on('click', 'a', function(event) {
-
-					var $a = $(this),
-						$gallery = $a.parents('.gallery'),
-						$modal = $gallery.children('.modal'),
-						$modalImg = $modal.find('img'),
-						href = $a.attr('href');
-
-					// Not an image? Bail.
-						if (!href.match(/\.(jpg|gif|png|mp4)$/))
-							return;
-
-					// Prevent default.
-						event.preventDefault();
-						event.stopPropagation();
-
-					// Locked? Bail.
-						if ($modal[0]._locked)
-							return;
-
-					// Lock.
-						$modal[0]._locked = true;
-
-					// Set src.
-						$modalImg.attr('src', href);
-
-					// Set visible.
-						$modal.addClass('visible');
-
-					// Focus.
-						$modal.focus();
-
-					// Delay.
-						setTimeout(function() {
-
-							// Unlock.
-								$modal[0]._locked = false;
-
-						}, 600);
-
-				})
-				.on('click', '.modal', function(event) {
-
-					var $modal = $(this),
-						$modalImg = $modal.find('img');
-
-					// Locked? Bail.
-						if ($modal[0]._locked)
-							return;
-
-					// Already hidden? Bail.
-						if (!$modal.hasClass('visible'))
-							return;
-
-					// Lock.
-						$modal[0]._locked = true;
-
-					// Clear visible, loaded.
-						$modal
-							.removeClass('loaded')
-
-					// Delay.
-						setTimeout(function() {
-
-							$modal
-								.removeClass('visible')
-
-							setTimeout(function() {
-
-								// Clear src.
-									$modalImg.attr('src', '');
-
-								// Unlock.
-									$modal[0]._locked = false;
-
-								// Focus.
-									$body.focus();
-
-							}, 475);
-
-						}, 125);
-
-				})
-				.on('keypress', '.modal', function(event) {
-
-					var $modal = $(this);
-
-					// Escape? Hide modal.
-						if (event.keyCode == 27)
-							$modal.trigger('click');
-
-				})
-				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
-					.find('img')
-						.on('load', function(event) {
-
-							var $modalImg = $(this),
-								$modal = $modalImg.parents('.modal');
-
-							setTimeout(function() {
-
-								// No longer visible? Bail.
-									if (!$modal.hasClass('visible'))
-										return;
-
-								// Set loaded.
-									$modal.addClass('loaded');
-
-							}, 275);
-
-						});
-
-})(jQuery);
+$(document).ready(function() {
+  "use strict";
+
+  var window_width = $(window).width(),
+    window_height = window.innerHeight,
+    header_height = $(".default-header").height(),
+    header_height_static = $(".site-header.static").outerHeight(),
+    fitscreen = window_height - header_height;
+
+  //   $(".fullscreen").css("height", window_height);
+  $(".fitscreen").css("height", fitscreen);
+
+  //------- Wow JS Initialized --------//
+  new WOW().init();
+
+  //------- Go to Top --------//
+  //------- Header Scroll Class  js --------//
+  $(window).on("scroll", function() {
+    if ($(this).scrollTop() > 100) {
+      $("#header").addClass("header-scrolled");
+      $("#back-top").addClass("back-top-animation");
+    } else {
+      $("#header").removeClass("header-scrolled");
+      $("#back-top").removeClass("back-top-animation");
+    }
+  });
+
+  /* ---------------------------------------------
+        scroll body to 0px on click
+     --------------------------------------------- */
+  $("#back-top a").on("click", function() {
+    $("body,html").animate(
+      {
+        scrollTop: 0
+      },
+      1000
+    );
+    return false;
+  });
+
+  //------- Niceselect  js --------//
+
+  if (document.getElementById("default-select")) {
+    $("select").niceSelect();
+  }
+
+  //------- Pre Loader --------//
+  $(window).on("load", function() {
+    $(".preloader-area")
+      .delay(200)
+      .fadeOut(500);
+  });
+
+  //------- Lightbox  js --------//
+  $(".img-gal").magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true
+    }
+  });
+
+  $(".play-btn").magnificPopup({
+    type: "iframe",
+    mainClass: "mfp-fade",
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false
+  });
+
+  //------- Filter  js --------//
+  $(window).on("load", function() {
+    $(".filters ul li").on("click", function() {
+      $(".filters ul li").removeClass("active");
+      $(this).addClass("active");
+
+      var data = $(this).attr("data-filter");
+      $grid.isotope({
+        filter: data
+      });
+    });
+
+    if (document.getElementById("work")) {
+      var $grid = $(".grid").isotope({
+        itemSelector: ".grid-item",
+        percentPosition: true,
+        masonry: {
+          columnWidth: ".grid-sizer"
+        }
+      });
+    }
+  });
+
+  //------- Accordion  js --------//
+
+  jQuery(document).ready(function($) {
+    if (document.getElementById("accordion")) {
+      var accordion_1 = new Accordion(document.getElementById("accordion"), {
+        collapsible: false,
+        slideDuration: 500
+      });
+    }
+  });
+
+  //------- Superfist nav menu  js --------//
+
+  $(".nav-menu").superfish({
+    animation: {
+      opacity: "show"
+    },
+    speed: 400
+  });
+
+  //------- Mobile Nav  js --------//
+
+  if ($("#nav-menu-container").length) {
+    var $mobile_nav = $("#nav-menu-container")
+      .clone()
+      .prop({
+        id: "mobile-nav"
+      });
+    $mobile_nav.find("> ul").attr({
+      class: "",
+      id: ""
+    });
+    $("body").append($mobile_nav);
+    $("body").prepend(
+      '<button type="button" id="mobile-nav-toggle"><i class="ti-menu"></i></button>'
+    );
+    $("body").append('<div id="mobile-body-overly"></div>');
+    $("#mobile-nav")
+      .find(".menu-has-children")
+      .prepend('<i class="ti-angle-down"></i>');
+
+    $(document).on("click", ".menu-has-children i", function(e) {
+      $(this)
+        .next()
+        .toggleClass("menu-item-active");
+      $(this)
+        .nextAll("ul")
+        .eq(0)
+        .slideToggle();
+      $(this).toggleClass("ti-angle-up ti-angle-down");
+    });
+
+    $(document).on("click", "#mobile-nav-toggle", function(e) {
+      $("body").toggleClass("mobile-nav-active");
+      $("#mobile-nav-toggle i").toggleClass("ti-close ti-menu");
+      $("#mobile-body-overly").toggle();
+    });
+
+    $(document).click(function(e) {
+      var container = $("#mobile-nav, #mobile-nav-toggle");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        if ($("body").hasClass("mobile-nav-active")) {
+          $("body").removeClass("mobile-nav-active");
+          $("#mobile-nav-toggle i").toggleClass("ti-close ti-menu");
+          $("#mobile-body-overly").fadeOut();
+        }
+      }
+    });
+  } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
+    $("#mobile-nav, #mobile-nav-toggle").hide();
+  }
+
+  //------- Smooth Scroll  js --------//
+
+  $(".nav-menu a, #mobile-nav a, .scrollto").on("click", function() {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      if (target.length) {
+        var top_space = 0;
+
+        if ($("#header").length) {
+          top_space = $("#header").outerHeight();
+
+          if (!$("#header").hasClass("header-fixed")) {
+            top_space = top_space;
+          }
+        }
+
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top - top_space
+          },
+          1500,
+          "easeInOutExpo"
+        );
+
+        if ($(this).parents(".nav-menu").length) {
+          $(".nav-menu .menu-active").removeClass("menu-active");
+          $(this)
+            .closest("li")
+            .addClass("menu-active");
+        }
+
+        if ($("body").hasClass("mobile-nav-active")) {
+          $("body").removeClass("mobile-nav-active");
+          $("#mobile-nav-toggle i").toggleClass("ti-menu ti-menu");
+          $("#mobile-body-overly").fadeOut();
+        }
+        return false;
+      }
+    }
+  });
+
+  $(document).ready(function() {
+    $("html, body").hide();
+
+    if (window.location.hash) {
+      setTimeout(function() {
+        $("html, body")
+          .scrollTop(0)
+          .show();
+
+        $("html, body").animate(
+          {
+            scrollTop: $(window.location.hash).offset().top - 108
+          },
+          1000
+        );
+      }, 0);
+    } else {
+      $("html, body").show();
+    }
+  });
+
+  //------- Google Map  js --------//
+
+  if (document.getElementById("map")) {
+    google.maps.event.addDomListener(window, "load", init);
+
+    function init() {
+      var mapOptions = {
+        zoom: 11,
+        center: new google.maps.LatLng(40.67, -73.94), // New York
+        styles: [
+          {
+            featureType: "water",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#e9e9e9"
+              },
+              {
+                lightness: 17
+              }
+            ]
+          },
+          {
+            featureType: "landscape",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#f5f5f5"
+              },
+              {
+                lightness: 20
+              }
+            ]
+          },
+          {
+            featureType: "road.highway",
+            elementType: "geometry.fill",
+            stylers: [
+              {
+                color: "#ffffff"
+              },
+              {
+                lightness: 17
+              }
+            ]
+          },
+          {
+            featureType: "road.highway",
+            elementType: "geometry.stroke",
+            stylers: [
+              {
+                color: "#ffffff"
+              },
+              {
+                lightness: 29
+              },
+              {
+                weight: 0.2
+              }
+            ]
+          },
+          {
+            featureType: "road.arterial",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#ffffff"
+              },
+              {
+                lightness: 18
+              }
+            ]
+          },
+          {
+            featureType: "road.local",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#ffffff"
+              },
+              {
+                lightness: 16
+              }
+            ]
+          },
+          {
+            featureType: "poi",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#f5f5f5"
+              },
+              {
+                lightness: 21
+              }
+            ]
+          },
+          {
+            featureType: "poi.park",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#dedede"
+              },
+              {
+                lightness: 21
+              }
+            ]
+          },
+          {
+            elementType: "labels.text.stroke",
+            stylers: [
+              {
+                visibility: "on"
+              },
+              {
+                color: "#ffffff"
+              },
+              {
+                lightness: 16
+              }
+            ]
+          },
+          {
+            elementType: "labels.text.fill",
+            stylers: [
+              {
+                saturation: 36
+              },
+              {
+                color: "#333333"
+              },
+              {
+                lightness: 40
+              }
+            ]
+          },
+          {
+            elementType: "labels.icon",
+            stylers: [
+              {
+                visibility: "off"
+              }
+            ]
+          },
+          {
+            featureType: "transit",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#f2f2f2"
+              },
+              {
+                lightness: 19
+              }
+            ]
+          },
+          {
+            featureType: "administrative",
+            elementType: "geometry.fill",
+            stylers: [
+              {
+                color: "#fefefe"
+              },
+              {
+                lightness: 20
+              }
+            ]
+          },
+          {
+            featureType: "administrative",
+            elementType: "geometry.stroke",
+            stylers: [
+              {
+                color: "#fefefe"
+              },
+              {
+                lightness: 17
+              },
+              {
+                weight: 1.2
+              }
+            ]
+          }
+        ]
+      };
+      var mapElement = document.getElementById("map");
+      var map = new google.maps.Map(mapElement, mapOptions);
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(40.67, -73.94),
+        map: map,
+        title: "Snazzy!"
+      });
+    }
+  }
+
+  //------- Mailchimp js --------//
+
+  $(document).ready(function() {
+    $("#mc_embed_signup")
+      .find("form")
+      .ajaxChimp();
+  });
+});

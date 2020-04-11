@@ -11,26 +11,81 @@
 	}
 </script>
 
-<!-- One -->
-<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-	<div class="content">
-		<h1>TEST1</h1>
-		<p class="major">A (modular, highly tweakable) responsive one-page template designed by <a href="https://html5up.net">HTML5 UP</a> and released for free under the <a href="https://html5up.net/license">Creative Commons</a>.</p>
-		<ul class="actions stacked">
-			<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
-		</ul>
-		<hr/>
-		<ul class="actions stacked">
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test1');" class="button big wide smooth-scroll-middle">TEST1</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test2');" class="button big wide smooth-scroll-middle">TEST2</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test3');" class="button big wide smooth-scroll-middle">TEST3</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test4');" class="button big wide smooth-scroll-middle">TEST4</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test5');" class="button big wide smooth-scroll-middle">TEST5</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test6');" class="button big wide smooth-scroll-middle">TEST6</a></li>
-			<li><a href="javascript:void(0);" onclick="fnPageMove('test7');" class="button big wide smooth-scroll-middle">TEST7</a></li>
-		</ul>
-	</div>
-	<div class="image">
-		<img src="/images/banner.jpg" alt="" />
+<!-- start banner Area -->
+<section class="home-banner-area">
+	<div class="container-fluid">
+		<div class="row fullscreen d-flex align-items-center">
+			<div class="banner-content col-lg-4 col-md-8 justify-content-center ">
+				<h1 class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">Im<span>a</span>ges <br />
+					mat<span>t</span>er</h1>
+				<div class="designation mb-25 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+					<p>Manner before lively wholly am mr indeed expect one every merry his yet has her. You mistress get dashwood
+						children off manner to other</p>
+				</div>
+				<a href="#" class="primary-btn" data-text="Explore More">
+					<span>E</span>
+					<span>x</span>
+					<span>p</span>
+					<span>l</span>
+					<span>o</span>
+					<span>r</span>
+					<span>e</span>
+					<span> </span>
+					<span>M</span>
+					<span>o</span>
+					<span>r</span>
+					<span>e</span>
+				</a>
+			</div>
+			<div class="banner-img offset-lg-1 col-lg-7 col-md-6">
+				<img class="img-fluid" src="img/banner-img.png" alt="">
+			</div>
+			<div class="social-icons">
+				<ul>
+					<li><a href="index.html"><i class="ti-facebook"></i>facebook</a></li>
+					<li><a href="index.html"><i class="ti-twitter"></i>twitter</a></li>
+					<li><a href="index.html"><i class="ti-instagram"></i>ti-instagram</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </section>
+<!-- End banner Area -->
+
+<!-- Start About Area -->
+<section class="about-area section-gap">
+	<div class="container">
+		<div class="row align-items-center justify-content-start">
+			<div class="col-lg-5 about-left">
+				<img class="img-fluid" src="img/about-img.jpg" alt="">
+			</div>
+			<div class="offset-lg-1 col-lg-5 col-md-12 about-right">
+				<div class="section-title">
+					<h2 class="mb-4">Lets <br />
+						Introduce About Myself</h2>
+				</div>
+				<div class="mb-35 wow fadeIn" data-wow-duration=".8s" data-wow-delay=".3s">
+					<p>
+						Up my excuse to suffer ladies though or. Bachelor possible out marianne directly confined relation as on he.
+					</p>
+					<p>Lose john poor same it case do year we. Full how way even the si extremely nor furniture fat questions now
+						provision one incommod preserved. Dose john poor same it case do year go we. Full how way even the sigh.
+						Extremely nor furniture fat one questions now provision then doing for.
+					</p>
+				</div>
+				<a href="#" class="primary-btn" data-text="Read More">
+					<span>R</span>
+					<span>e</span>
+					<span>a</span>
+					<span>d</span>
+					<span></span>
+					<span>M</span>
+					<span>o</span>
+					<span>r</span>
+					<span>e</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End About Area -->

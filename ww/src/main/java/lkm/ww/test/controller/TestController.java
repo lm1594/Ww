@@ -23,8 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class TestController {
 	
 	@RequestMapping({"/test1.do", "/test2.do", "/test3.do"
-					, "/test4.do", "/test5.do", "/test6.do"
-					, "/test7.do"})
+					, "/test4.do", "/test5.do"})
 	public ModelAndView test(HttpServletRequest request) {
 		String pageName = request.getRequestURI().split("/")[3].replaceAll(".do", "");
 		ModelAndView mav = new ModelAndView("ww/test/"+pageName);

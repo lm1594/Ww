@@ -1,0 +1,278 @@
+// Preloader
+.preloader-area {
+  background-color: $primary-color;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  .loader-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+  .loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-width: 30px;
+    border-style: double;
+    border-color: transparent #fff;
+    @include transform-origin(50% 50%);
+    @include animation(loader 2s linear infinite);
+  }
+}
+
+@include keyframes(loader) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+// Go To Top
+#back-top {
+  position: fixed;
+  right: 0;
+  bottom: 30px;
+  cursor: pointer;
+  z-index: 9999999;
+  opacity: 0;
+  @include transition();
+  a {
+    background: $primary-color;
+    display: block;
+    text-align: center;
+    width: 35px;
+    height: 40px;
+    border-radius: 5px 5px 0 0;
+    padding: 12px 8px 8px 7px;
+    @include transition();
+    i {
+      font-size: 22px;
+      color: $white;
+    }
+    &:hover {
+      box-shadow: 0 5px 12px rgba(156, 156, 156, 0.7);
+    }
+  }
+}
+
+.back-top-animation {
+  right: 20px !important;
+  opacity: 1 !important;
+  @include transition(all 0.4s ease-in !important);
+}
+
+.section-gap {
+  padding: 140px 0;
+  @media (max-width: 991px) {
+    padding: 70px 0;
+  }
+}
+
+.section-gap-top {
+  padding-top: 140px;
+  @media (max-width: 991px) {
+    padding: 70px 0;
+  }
+}
+
+.section-title {
+  margin-bottom: 80px;
+  @media (max-width: 991px) {
+    margin-bottom: 40px;
+  }
+  h3 {
+    font-weight: 300;
+    color: $text-color;
+    font-size: 20px;
+    line-height: 18px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 45px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 50px;
+    @media (max-width: 1024px) {
+      font-size: 40px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    br {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+    span {
+      position: relative;
+      z-index: 10;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        bottom: 13px;
+        width: 66px;
+        height: 12px;
+        background: $primary-color;
+        z-index: -1;
+        @media (max-width: 1024px) {
+          bottom: 9px;
+        }
+      }
+    }
+  }
+}
+
+.alert-msg {
+  color: #008000;
+}
+
+.primary-btn {
+  color: $title-color;
+  padding: 0 42px;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 0px;
+  font-family: $primary-font;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid $primary-color;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  @include backface-visibility(hidden);
+  @include transition();
+  @media (max-width: 767px) {
+    padding: 0 35px;
+  }
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 13px 0;
+    @include transition();
+    @include transition-timing-function(cubic-bezier(0.75, 0, 0.125, 1));
+    color: $title-color;
+    @media (max-width: 767px) {
+      padding: 8px 0;
+    }
+  }
+  span {
+    display: inline-block;
+    padding: 12px 0;
+    opacity: 0;
+    color: $title-color;
+    @include transform(translate3d(10, 10px, 0));
+    @include transition();
+    @include transition-timing-function(cubic-bezier(0.75, 0, 0.125, 1));
+    @media (max-width: 767px) {
+      padding: 8px 0;
+    }
+  }
+  &:hover {
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    &:before {
+      opacity: 0;
+      @include transform(translate3d(0, 100%, 0));
+    }
+    span {
+      opacity: 1;
+      color: $white;
+      @include transform(translate3d(0, 0, 0));
+      &:nth-child(1) {
+        @include transition-delay(0.01s);
+      }
+      &:nth-child(2) {
+        @include transition-delay(0.05s);
+      }
+      &:nth-child(3) {
+        @include transition-delay(0.1s);
+      }
+      &:nth-child(4) {
+        @include transition-delay(0.15s);
+      }
+      &:nth-child(5) {
+        @include transition-delay(0.2s);
+      }
+      &:nth-child(6) {
+        @include transition-delay(0.25s);
+      }
+      &:nth-child(7) {
+        @include transition-delay(0.3s);
+      }
+      &:nth-child(8) {
+        @include transition-delay(0.35s);
+      }
+      &:nth-child(9) {
+        @include transition-delay(0.4s);
+      }
+      &:nth-child(10) {
+        @include transition-delay(0.45s);
+      }
+      &:nth-child(11) {
+        @include transition-delay(0.5s);
+      }
+      &:nth-child(12) {
+        @include transition-delay(0.55s);
+      }
+      &:nth-child(13) {
+        @include transition-delay(0.6s);
+      }
+      &:nth-child(14) {
+        @include transition-delay(0.65s);
+      }
+      &:nth-child(15) {
+        @include transition-delay(0.7s);
+      }
+      &:nth-child(16) {
+        @include transition-delay(0.75s);
+      }
+      &:nth-child(17) {
+        @include transition-delay(0.8s);
+      }
+      &:nth-child(18) {
+        @include transition-delay(0.85s);
+      }
+      &:nth-child(19) {
+        @include transition-delay(0.95s);
+      }
+      &:nth-child(20) {
+        @include transition-delay(1s);
+      }
+    }
+  }
+  &.white {
+    border: 1px solid $primary-color2;
+    color: $primary-color;
+    background: $white;
+    span {
+      color: $title-color;
+    }
+    &:before {
+      color: $white;
+    }
+    &:hover {
+      background: $primary-color2;
+      color: $white;
+      span {
+        color: $white;
+      }
+    }
+  }
+}
