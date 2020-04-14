@@ -12,6 +12,10 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class MntInfoVO extends PageVO{
+	
+	//------------------
+	// 산 정보 목록
+	//------------------
 	private String mntilistno;			// 산정보코드
 	private String mntitop;				// 100대명산선정이유
 	private String mntiname;			// 산명
@@ -24,4 +28,17 @@ public class MntInfoVO extends PageVO{
 	private String mntidetails;			// 산정보설명
 	private String resultCode;			// 결과코드
 	private String resultMsg;			// 결과메세지
+	
+	//------------------
+	// 숲길 구간명
+	//------------------
+	private String frtrlSectnNm;		// 숲길구간명
+	
+	//------------------
+	// 
+	//------------------
+	
+	//------------------
+	// 
+	//------------------
 }
