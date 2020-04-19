@@ -10,7 +10,7 @@
 <!-- 메인페이지 -->
 <form id="form1" name="form1">
 	<!-- start banner Area -->
-    <section class="banner-area relative">
+    <!-- <section class="banner-area relative">
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
           <div class="about-content col-lg-12">
@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- End banner Area -->
 
 	<!-- Start Work Area Area -->
@@ -28,8 +28,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="section-title text-center">
-						<h3>Our Infomation</h3>
-						<h2><span>Check</span> Infomation</h2>
+						<h3>Infomation</h3>
+						<h2><span>우리나라</span> 여행정보</h2>
 					</div>
 				</div>
 
@@ -56,7 +56,7 @@
 									<h4>Korea Mountain 산</h4>
 									<div class="cat">More Infomation</div>
 								</div>
-								<a class="overlay" href="project-details.html"></a>
+								<a class="overlay" href="/ww/mntInfo/mntInfoList.do"></a>
 							</div>
 						</div>
 					</div>
