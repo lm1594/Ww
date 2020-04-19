@@ -22,7 +22,12 @@
 					</c:if>
 				</div>
 				<div class="col-md-9 mt-sm-20 left-align-p">
-					<p>${rvo.mntidetails}</p>
+					<c:if test='${rvo.mntidetails eq "( - )"}'>
+						<p>정보없음</p>
+					</c:if>
+					<c:if test='${rvo.mntidetails ne "( - )"}'>
+						<p>${rvo.mntidetails}</p>
+					</c:if>
 				</div>
 			</div>
 		</c:forEach>
